@@ -6,7 +6,9 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/nx-transloco-keys-manager",
         "index": "apps/nx-transloco-keys-manager/src/index.html",
@@ -17,7 +19,9 @@
           "apps/nx-transloco-keys-manager/src/favicon.ico",
           "apps/nx-transloco-keys-manager/src/assets"
         ],
-        "styles": ["apps/nx-transloco-keys-manager/src/styles.css"],
+        "styles": [
+          "apps/nx-transloco-keys-manager/src/styles.css"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -54,7 +58,7 @@
       "defaultConfiguration": "production"
     },
     "serve": {
-      "executor": "@angular-devkit/build-angular:dev-server",
+      "executor": "ngx-build-plus:dev-server",
       "configurations": {
         "production": {
           "browserTarget": "nx-transloco-keys-manager:build:production"
@@ -82,7 +86,9 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/nx-transloco-keys-manager"],
+      "outputs": [
+        "coverage/apps/nx-transloco-keys-manager"
+      ],
       "options": {
         "jestConfig": "apps/nx-transloco-keys-manager/jest.config.js",
         "passWithNoTests": true
