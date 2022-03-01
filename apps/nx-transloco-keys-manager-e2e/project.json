@@ -1,0 +1,28 @@
+{
+  "root": "apps/nx-transloco-keys-manager-e2e",
+  "sourceRoot": "apps/nx-transloco-keys-manager-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/nx-transloco-keys-manager-e2e/cypress.json",
+        "devServerTarget": "nx-transloco-keys-manager:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "nx-transloco-keys-manager:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/nx-transloco-keys-manager-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["nx-transloco-keys-manager"]
+}

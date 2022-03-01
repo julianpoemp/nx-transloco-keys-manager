@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "nx-transloco-keys-manager": "apps/nx-transloco-keys-manager",
+    "nx-transloco-keys-manager-e2e": "apps/nx-transloco-keys-manager-e2e"
+  }
+}
